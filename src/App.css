@@ -150,11 +150,19 @@
   border-bottom: 1px solid #303030;
 }
 
+.sidebar-toggle svg:hover{
+  background-color: #222222;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .sidebar-header svg{
   width: 20px;
   height: 20px;
   fill: currentColor;
   background-color: transparent;
+  align-items: center;
+  padding: 6px;
 }
 
 .sidebar-content{
@@ -163,6 +171,7 @@
   justify-content: space-between;
   padding: 12px 10px;
   border-bottom: 1px solid #303030;
+  height: 100%;
 }
 
 .sidebar-footer{
@@ -170,7 +179,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 10px;
+  border-bottom: 1px solid #303030;
   bottom: 0;
-  border-top: 1px solid #303030;
-  position: absolute;
 }
