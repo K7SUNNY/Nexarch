@@ -4,7 +4,46 @@ function Header() {
   return (
     <div>
       <header className="header">
-        <div>Nexarch</div>
+        <div className="logo">
+          <div className="logo-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 100 100"
+              width="24px"
+              height="24px"
+            >
+              <g
+                fill="#000"
+                stroke="#000"
+                stroke-width="7"
+                stroke-linecap="round"
+              >
+                {/* Left vertical bar */}
+                <line x1="30" y1="25" x2="30" y2="75" />
+
+                {/* Right vertical bar */}
+                <line x1="74" y1="25" x2="74" y2="75" />
+
+                {/* Top-left diagonal segment */}
+                <line x1="30" y1="25" x2="63" y2="53" />
+
+                {/* Bottom-right diagonal segment */}
+                <line x1="41" y1="51" x2="74" y2="75" />
+
+                {/* Four outer large nodes */}
+                <circle cx="30" cy="25" r="9" stroke="none" />
+                <circle cx="30" cy="75" r="9" stroke="none" />
+                <circle cx="74" cy="25" r="9" stroke="none" />
+                <circle cx="74" cy="75" r="9" stroke="none" />
+
+                {/* Two inner diagonal end nodes */}
+                <circle cx="63" cy="53" r="5.5" stroke="none" />
+                <circle cx="41" cy="51" r="5.5" stroke="none" />
+              </g>
+            </svg>
+          </div>
+          <span className="logo-text">Nexarchr</span>
+        </div>
 
         <form className="search-bar" onSubmit={(e) => e.preventDefault()}>
           <div className="search-input-wrapper">
