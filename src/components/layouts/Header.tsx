@@ -12,11 +12,14 @@ function Header() {
               width="24px"
               height="24px"
             >
+              {/* Background */}
+              <rect width="100" height="100" rx="20" fill="#f1f1f1" />
+
               <g
                 fill="#000"
                 stroke="#000"
-                stroke-width="7"
-                stroke-linecap="round"
+                strokeWidth="7"
+                strokeLinecap="round"
               >
                 {/* Left vertical bar */}
                 <line x1="30" y1="25" x2="30" y2="75" />
