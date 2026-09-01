@@ -45,7 +45,7 @@ function Header() {
               </g>
             </svg>
           </div>
-          <span className="logo-text">Nexarchr</span>
+          <span className="logo-text">Nexarch</span>
         </div>
 
         <form className="search-bar" onSubmit={(e) => e.preventDefault()}>
