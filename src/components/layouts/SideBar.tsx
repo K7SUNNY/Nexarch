@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../../App.css";
+import "../../styles/layout.css";
 
 function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -8,7 +9,9 @@ function Sidebar() {
     <div className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
       {/* header */}
       <div className="sidebar-header">
-        <span className="project-name">Project Name</span>
+        <div className="project-name">
+          <span className="project-name-item">Project Name</span>
+        </div>
         <div
           className="sidebar-toggle"
           onClick={() => setIsCollapsed((prev) => !prev)}
@@ -36,7 +39,7 @@ function Sidebar() {
       {/* main content */}
       <div className="sidebar-content">
         <div className="action-buttons">
-          <div className="new-window action" title="New page">
+          <div className="new-window action-buttons-item" title="New page">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24px"
@@ -74,7 +77,10 @@ function Sidebar() {
             </svg>
             <span className="new-text action-desktop">New page</span>
           </div>
-          <div className="projects action" title="Open Project">
+          <div
+            className="open-project action-buttons-item"
+            title="Open Project"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24px"

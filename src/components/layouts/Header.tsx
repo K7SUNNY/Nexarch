@@ -1,4 +1,5 @@
 import "../../App.css";
+import "../../styles/layout.css";
 
 function Header() {
   return (
