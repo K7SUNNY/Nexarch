@@ -49,7 +49,7 @@ function Header() {
           <span className="logo-text">Nexarch</span>
         </div>
 
-        <form className="search-bar" onSubmit={(e) => e.preventDefault()}>
+        <form className="search-bar">
           <div className="search-input-wrapper">
             <input type="text" placeholder="Search" />
           </div>
