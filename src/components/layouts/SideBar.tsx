@@ -4,6 +4,7 @@ import "../../styles/layout.css";
 
 function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isToolsOpen, setIsToolsOpen] = useState(true);
 
   return (
     <div className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
@@ -98,6 +99,65 @@ function Sidebar() {
             </svg>
             <span className="project-text action-desktop">Open Project</span>
           </div>
+        </div>
+        <div className="sidebar-tools">
+          <div
+            className="tools-toggle"
+            onClick={() => setIsToolsOpen((prev) => !prev)}
+            role="button"
+            tabIndex={0}
+            aria-expanded={isToolsOpen}
+            aria-label="Toggle select & place tools"
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                setIsToolsOpen((prev) => !prev);
+              }
+            }}
+          >
+            <span className="tools-title action-desktop">
+              Select & place tools
+            </span>
+            <div
+              className={`tools-toggle-svg ${isToolsOpen ? "open" : "closed"}`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18px"
+                height="18px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6 9L12 15L18 9"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          {/* Demo tools */}
+          {isToolsOpen && (
+            <ul className="tools-list action-desktop">
+              <li className="tool-item">
+                <span className="tool-bullet"></span>
+                <span>Select Tool</span>
+              </li>
+              <li className="tool-item">
+                <span className="tool-bullet"></span>
+                <span>Wall & Structure</span>
+              </li>
+              <li className="tool-item">
+                <span className="tool-bullet"></span>
+                <span>Doors & Windows</span>
+              </li>
+              <li className="tool-item">
+                <span className="tool-bullet"></span>
+                <span>Objects & Fixtures</span>
+              </li>
+            </ul>
+          )}
         </div>
       </div>
 
